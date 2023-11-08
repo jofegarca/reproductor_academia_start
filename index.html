@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Arte para Niños</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="contenedor">
+        <header>
+            <h1>Academia de Música Start</h1>
+            <img src="../Reproductor_libros_suzuki/img/banner.jpg" alt="banner_Start">
+        </header>
+        <br>
+        <div class="player-container">
+            <div>
+                <h1>Reproductor de Música</h1>
+                <br>
+                <div class="music-player">
+                    <audio id="music-player" controls>
+                        <source src="../Reproductor_libros_suzuki/music/Libro 1 Suzuki/1. Estrellita-y-VARIACIONES-LENTO.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                </div>
+                <br>
+                <h2>Playlist</h2>
+                <br>
+            </div>
+            <div class="contenedor-listas">
+                <div class="listas">
+                    <h3>Libro 1 - Suzuki</h3>
+                    <br>
+                    <ol class="playlist">
+                        <li><a href="../Reproductor_libros_suzuki/music/Libro 1 Suzuki/1. Estrellita-y-VARIACIONES-LENTO.mp3">Estrellita-y-VARIACIONES-LENTO</a></li>
+                        <li><a href="../Reproductor_libros_suzuki/music/Libro 1 Suzuki/2. Remando Suavemente.mp3">Remando Suavemente</a></li>
+                        <li><a href="../Reproductor_libros_suzuki/music/Libro 1 Suzuki/3. Cancion del viento Lento.mp3">Cancion del viento Lento</a></li>
+                        <li><a href="../Reproductor_libros_suzuki/music/Libro 1 Suzuki/6. Long long ago.mp3">Long long ago</a></li>
+                        <li><a href="../Reproductor_libros_suzuki/music/Libro 1 Suzuki/7. Movimiento Perpetuo.mp3">Movimiento Perpetuo</a></li>
+                    </ol>
+                </div>
+
+                <div class="listas">
+                    <h3>Tradicional</h3>
+                    <br>
+                    <ol class="playlist">
+                        <li><a href="../Reproductor_libros_suzuki/music/Libro 1 Suzuki/1. Estrellita-y-VARIACIONES-LENTO.mp3">Estrellita-y-VARIACIONES-LENTO</a></li>
+                        <li><a href="../Reproductor_libros_suzuki/music/Libro 1 Suzuki/2. Remando Suavemente.mp3">Remando Suavemente</a></li>
+                        <li><a href="../Reproductor_libros_suzuki/music/Libro 1 Suzuki/3. Cancion del viento Lento.mp3">Cancion del viento Lento</a></li>
+                        <li><a href="../Reproductor_libros_suzuki/music/Libro 1 Suzuki/6. Long long ago.mp3">Long long ago</a></li>
+                        <li><a href="../Reproductor_libros_suzuki/music/Libro 1 Suzuki/7. Movimiento Perpetuo.mp3">Movimiento Perpetuo</a></li>
+                    </ol>
+                </div>
+
+                <div class="listas">
+                    <h3>Tradicional</h3>
+                    <br>
+                    <ol class="playlist">
+                        <li><a href="../Reproductor_libros_suzuki/music/Libro 1 Suzuki/1. Estrellita-y-VARIACIONES-LENTO.mp3">Estrellita-y-VARIACIONES-LENTO</a></li>
+                        <li><a href="../Reproductor_libros_suzuki/music/Libro 1 Suzuki/2. Remando Suavemente.mp3">Remando Suavemente</a></li>
+                        <li><a href="../Reproductor_libros_suzuki/music/Libro 1 Suzuki/3. Cancion del viento Lento.mp3">Cancion del viento Lento</a></li>
+                        <li><a href="../Reproductor_libros_suzuki/music/Libro 1 Suzuki/6. Long long ago.mp3">Long long ago</a></li>
+                        <li><a href="../Reproductor_libros_suzuki/music/Libro 1 Suzuki/7. Movimiento Perpetuo.mp3">Movimiento Perpetuo</a></li>
+                    </ol>
+                </div>
+
+                <div class="listas">
+                    <h3>Tradicional</h3>
+                    <br>
+                    <ol class="playlist">
+                        <li><a href="../Reproductor_libros_suzuki/music/Libro 1 Suzuki/1. Estrellita-y-VARIACIONES-LENTO.mp3">Estrellita-y-VARIACIONES-LENTO</a></li>
+                        <li><a href="../Reproductor_libros_suzuki/music/Libro 1 Suzuki/2. Remando Suavemente.mp3">Remando Suavemente</a></li>
+                        <li><a href="../Reproductor_libros_suzuki/music/Libro 1 Suzuki/3. Cancion del viento Lento.mp3">Cancion del viento Lento</a></li>
+                        <li><a href="../Reproductor_libros_suzuki/music/Libro 1 Suzuki/6. Long long ago.mp3">Long long ago</a></li>
+                        <li><a href="../Reproductor_libros_suzuki/music/Libro 1 Suzuki/7. Movimiento Perpetuo.mp3">Movimiento Perpetuo</a></li>
+                    </ol>
+                </div>
+            </div>    
+        </div>
+        
+                   
+    </div>
+    <script>
+        var audioPlayer = document.getElementById('music-player');
+        var playlists = document.getElementsByClassName('playlist');
+
+        for (var i = 0; i < playlists.length; i++) {
+        var playlistItems = playlists[i].getElementsByTagName('li');
+
+        for (var j = 0; j < playlistItems.length; j++) {
+        playlistItems[j].addEventListener('click', function(event) {
+            event.preventDefault();
+            audioPlayer.src = this.getElementsByTagName('a')[0].href;
+            audioPlayer.play();
+        });
+        }
+    }
+    </script>
+</body>
+</html>
