@@ -18,6 +18,11 @@ header h1 {
 header img {
     vertical-align: bottom;}
 
+img {
+    max-width: 100%;
+    border-radius: 10px;
+
+}
 
 .player-container {
     background-color: #59cbe8; 
@@ -35,21 +40,23 @@ h2{
 }
 .contenedor-listas{
     background-color: #59cbe8; 
-    display: flex; 
-    flex-direction:row;
-    width: 100%;
-    align-items: center;
+    display: flex;
+    flex-flow: row wrap; 
+    max-width: 100%;
+    align-items: flex-start;
     justify-content: center;
+    margin:0 auto;
 }
 
 .listas {
     background-color: #9adbe8;
     display: block;
-    height: 40vh;
-    width: 30%;
-    align-items:center;
-    justify-content:center;
+    width: 25%;
+    height: 50vh;
     margin: 10px;
+    line-height: 1.5;
+    border-radius: 10px;
+    overflow: auto;
 }
 
 .listas h3 {
