@@ -1,4 +1,4 @@
-* {margin: 0px; border: 0px;}
+* {margin: 0px; border: 0px; box-sizing: border-box;}
 body {background-color: #002b49;} 
  
 #contenedor {width: 95%; margin: 30px auto 30px auto;} 
@@ -53,4 +53,64 @@ h2{
 .listas h3 {
     text-align: center;
     padding: 10px;
+}
+
+/*Codigo ajustado para navegadores y dispositivos moviles */
+
+/* Estilos para móviles */
+@media only screen and (max-width: 600px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .listas {
+        width: 100%;
+    }
+}
+
+/* Estilos para tablets */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .listas {
+        width: 50%;
+    }
+}
+
+/* Estilos para navegadores específicos */
+@supports (--custom: property) {
+    /* Estilos específicos para navegadores que admiten la propiedad personalizada (--custom) */
+    body {
+        font-family: 'CustomFont', sans-serif;
+    }
+}
+
+@supports (-ms-ime-align: auto) {
+    /* Estilos específicos para Internet Explorer */
+    body {
+        font-family: 'IEFont', sans-serif;
+    }
+}
+
+/* Estilos específicos para Chrome */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    body {
+        background-color:#002b49;
+    }
+}
+
+/* Estilos específicos para Firefox */
+@-moz-document url-prefix() {
+    body {
+        background-color: #002b49;
+    }
+}
+
+/* Estilos específicos para Edge */
+@supports (-ms-accelerator:true) {
+    body {
+        background-color: #002b49;
+    }
 }
