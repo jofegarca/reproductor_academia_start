@@ -6,6 +6,7 @@ header {
     background-color: #59cbe8;
     text-align: center;
     justify-content: center;
+    width: auto;
 } 
 
 header h1 {
@@ -26,6 +27,7 @@ header img {
     align-items:center;
     justify-content:center;
     padding: 20px;
+    width: auto;
 }
 
 h2{
